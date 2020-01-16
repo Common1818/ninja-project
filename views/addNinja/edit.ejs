@@ -1,0 +1,12 @@
+<h2>Find Ninja details here</h2>
+
+<form action="/ninja/update/<%=Ninja.id%>?_method=PUT"method="POST">
+    <div>
+        <label>Id </label>
+        <input type="text" name="id" value="<%=Ninja.id%>">
+    </div>
+    <%- include("_form_fields.ejs") %>
+    <a href="/ninja/details">cancel</a>
+    <button type="submit">Update</button>  
+</form>
+

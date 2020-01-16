@@ -1,0 +1,27 @@
+<h2> Ninja Details</h2>
+
+<div>
+    Name : <%= Ninja.name %>
+</div>
+<div>
+    Email : <%= Ninja.email %>
+</div>
+<div>
+    Rank : <%= Ninja.rank %>
+</div>
+<div>
+    availability : <%= Ninja.available %>
+</div>
+<div>
+    <!-- how to display the lat and lon seperately ?-->
+    coordinates : <%= Ninja.geometry.coordinates %>
+</div>
+
+<a href= "/ninja/edit/<%= Ninja.id %>">Edit</a>
+<!-- without "/" in above link the link will be relative and it will show login/edit, which obviously didnt exist instead of ninja/edit   -->
+<form action="/ninja/delete/<%=Ninja.id%>?_method=DELETE" method="POST">
+    <div>
+        <button type="submit">Delete</button>
+    </div>
+</form>
+<!-- log out button -->

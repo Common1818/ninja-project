@@ -1,0 +1,15 @@
+ <button id ="geolocate"> Locate </button>
+ 
+ <a id ="ninjaList" href=`/book/ninjaList?lat=${lat}&lon=${lon}`>Find Ninja</a>
+ <!-- <form action ='/book/ninjaList'>
+   <button id ="ninjaList" type = "submit">Find Ninjas</button>
+ </form> -->
+<% if(ninjas != null){ %>
+   <% console.log(ninjas) %>
+    <h2>Ninjas available</h2>
+    <% ninjas.forEach(ninja => {%>
+      Name: <%=ninja.name %> <br>
+   <% })%>
+<%}%>
+<div id="map"> </div>
+
